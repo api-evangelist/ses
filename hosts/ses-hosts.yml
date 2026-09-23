@@ -1,0 +1,65 @@
+generated: '2026-09-22'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 4
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - other
+  - partner
+  - website
+hosts:
+- host: api.ses.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: ses.com
+  role: api
+  relation: own
+- host: partners.ses.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  title: SES
+  status: 200
+  registrable_domain: ses.com
+  role: partner
+  relation: own
+- host: ses.com
+  found_by:
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: ses.com
+  role: other
+  relation: own
+- host: www.ses.com
+  found_by:
+  - pointer
+  - vendor-detect
+  types:
+  - Website
+  - TermsOfService
+  - PrivacyPolicy
+  - CookiePolicy
+  - VulnerabilityDisclosure
+  - VendorInformation
+  - AboutUs
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: ses.com
+  role: website
+  relation: own

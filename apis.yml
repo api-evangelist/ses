@@ -1,23 +1,64 @@
 aid: ses
+
 name: SES
-description: 'SES is a company surfaced via the API Evangelist harvest backlog (source: space) and added
-  to the network as a stub for full-pipeline profiling.'
-url: https://raw.githubusercontent.com/api-evangelist/ses/refs/heads/main/apis.yml
+
+description: 'SES (Société Européenne des Satellites) is a leading satellite operator providing global communications services, including broadband internet, broadcast, and secure government connectivity. The company designs, builds, and operates a fleet of geostationary and medium Earth orbit satellites, delivering resilient, high‑throughput connectivity to enterprises, governments, and consumers worldwide. SES focuses on innovative solutions for aviation, maritime, energy, and digital infrastructure, emphasizing sustainability and advanced technology integration across its network.'
+
+url: https://raw.githubusercontent.com/api-evangelist/ses/main/apis.yml
+
 x-type: company
+
 x-source: harvest:space
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-22'
+
 modified: '2026-09-22'
+
 tags:
-- Company
-apis: []
+- Satellite
+- Communications
+- Aerospace
+- Enterprise
+- Government
+- Innovation
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/ses-hosts.yml
+- type: Vendors
+  url: vendors/ses-vendors.yml
+- type: DomainSecurity
+  url: security/ses-domain-security.yml
 - type: Website
-  url: https://ses.com/
+  url: https://www.ses.com/
+- type: TermsOfService
+  url: https://www.ses.com/v2/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.ses.com/v2/privacy-policy
+- type: CookiePolicy
+  url: https://www.ses.com/v2/cookie-policy
+- type: VulnerabilityDisclosure
+  url: https://www.ses.com/v2/ses-vulnerability-disclosure-policy
+- type: VendorInformation
+  url: https://www.ses.com/v2/vendor-information
+- type: AboutUs
+  url: https://www.ses.com/v2/company/about-us
+
+apis: []
+x-enrichment:
+  date: '2026-09-22'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
