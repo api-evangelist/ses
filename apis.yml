@@ -17,7 +17,7 @@ specificationVersion: '0.20'
 
 created: '2026-09-22'
 
-modified: '2026-09-22'
+modified: '2026-10-06'
 
 tags:
 - Satellite
@@ -34,6 +34,8 @@ maintainers:
   email: info@apis.io
 
 common:
+- url: https://www.ses.com/insights
+  type: Blog
 - type: Hosts
   url: hosts/ses-hosts.yml
 - type: Vendors
