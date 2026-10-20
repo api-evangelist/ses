@@ -2,6 +2,10 @@ generated: '2026-10-13'
 method: searched
 checked:
 - https://azuremarketplace.microsoft.com/
+- https://manrs.org/netops/participants/
+- https://www.peeringdb.com/api/fac
+- https://www.peeringdb.com/api/ix
+- https://www.peeringdb.com/api/net
 marketplace_apps: []
 edges:
 - partner_name: Microsoft Azure Marketplace
@@ -20,3 +24,40 @@ edges:
   seller_name: SES
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
+- partner_name: PeeringDB (interconnection register)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.peeringdb.com/net/2918
+  category: network interconnection register
+  contract_reference:
+    register: PeeringDB (peeringdb.com/api net, ix, fac, org)
+    standard: null
+    spec_file: null
+    role: peeringdb-network
+    registered_name: SES ASTRA
+    register_id: https://www.peeringdb.com/net/2918
+    matched_domain: ses.com
+    matched_by: domain
+    asns:
+    - 12684
+    - 60725
+    info_types:
+    - Cable/DSL/ISP
+    ix_presence: 16
+    exchanges_operated: []
+    facilities_operated: 0
+    signal_note: 'participation only: PeeringDB is self-registered by network operators; ASNs, IX presence and facility
+      counts are context, never counted'
+    detected_by: sweep-network-edge.py
+    detected: '2026-10-20'
+  detected_by: sweep-network-edge.py
+  first_seen: '2026-10-20'
+source:
+- https://www.peeringdb.com/api/net
+- https://www.peeringdb.com/api/ix
+- https://www.peeringdb.com/api/fac
+- https://manrs.org/netops/participants/
